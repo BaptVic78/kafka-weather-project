@@ -66,7 +66,7 @@ I selected **Apache Kafka** for this project because it is the industry standard
     docker ps
     ```
     *We can see our 5 containers well launched.*
-    ![active containers](./screenshots/containers_actives.png)
+    ![active containers](/screenshots/containers_actives.jpg)
 ---
 
 ## 📂 Project Structure
