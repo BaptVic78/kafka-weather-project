@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+
+mysql_data/
+db_data/
+
+REPORT.docx
+
+.DS_Store
+.vscode/
