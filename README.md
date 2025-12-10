@@ -73,7 +73,7 @@ I selected **Apache Kafka** for this project because it is the industry standard
     docker-compose logs -f producer
     ```
     *We can check into the terminal:*
-    ![producer logs](/screenshots/producer_logs)
+    ![producer logs](/screenshots/producer_logs.jpg)
 
 ---
 
