@@ -65,15 +65,22 @@ I selected **Apache Kafka** for this project because it is the industry standard
     ```bash
     docker ps
     ```
-    *We can see our 5 containers well launched:*
+    We can see our 5 containers well launched:
     ![active containers](/screenshots/containers_actives.jpg)
 
 2.  **Check the logs of producer to see if it send values:**
     ```bash
     docker-compose logs -f producer
     ```
-    *We can check into the terminal:*
+    We can check into the terminal:
     ![producer logs](/screenshots/producer_logs.jpg)
+
+3.  **Check the logs of consumer to see if it send values:**
+    ```bash
+    docker-compose logs -f consumer
+    ```
+    Here is an example of result: Each time the temperature is above the threashold, the consumer reports an alert
+    ![consumer logs](/screenshots/consumer_logs.jpg)
 
 ---
 
