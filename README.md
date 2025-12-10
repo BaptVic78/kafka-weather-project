@@ -56,6 +56,17 @@ I selected **Apache Kafka** for this project because it is the industry standard
     docker exec -it mysql_db mysql -u root weather_db -e "SELECT * FROM warning_temperatures;"
     ```
 
+## Working example
+
+1.  **Start the infrastructure:**
+    ```bash
+    docker-compose up -d --build
+    ```
+    ```bash
+    docker ps
+    ```
+    *We can see our 5 containers well launched.*
+    ![active containers](./screenshots/containers_actives.png)
 ---
 
 ## 📂 Project Structure
