@@ -40,7 +40,7 @@ try :
         sensor_id = data.get('sensor_id')
         timestamp = data.get('timestamp')
         if temp > 30.0 : 
-            print(f"⚠️ ALERTE : Température élevée ({temp}°C)! ")
+            print(f"ALERTE : Température élevée ({temp}°C)! ")
 
             add_alert_query = ("INSERT INTO warning_temperatures "
                                 "(sensor_id, temperature, timestamp) "
