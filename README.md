@@ -58,7 +58,13 @@ I selected **Apache Kafka** for this project because it is the industry standard
 
 ## Working example
 
-1.  **Start the infrastructure:**
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/BaptVic78/kafka-weather-project.git](https://github.com/BaptVic78/kafka-weather-project.git)
+    cd kafka-weather-project
+    ```
+
+2.  **Start the infrastructure:**
     ```bash
     docker-compose up -d --build
     ```
@@ -68,21 +74,36 @@ I selected **Apache Kafka** for this project because it is the industry standard
     We can see our 5 containers well launched:
     ![active containers](/screenshots/containers_actives.jpg)
 
-2.  **Check the logs of producer to see if it send values:**
+3.  **Check the logs:**
     ```bash
     docker-compose logs -f producer
     ```
     We can check into the terminal:
     ![producer logs](/screenshots/producer_logs.jpg)
 
-3.  **Check the logs of consumer to see if it send values:**
     ```bash
     docker-compose logs -f consumer
     ```
-    Here is an example of result: Each time the temperature is above the threashold, the consumer reports an alert
+    Here is an example of result: Each time the temperature is above the threashold of 30°C, the consumer reports an alert
     ![consumer logs](/screenshots/consumer_logs.jpg)
 
 ---
+
+4.  **Check the Database:**
+    ```bash
+    docker exec -it mysql_db mysql -u root weather_db
+    ```
+    ```bash
+    SHOW TABLES;
+    ```
+    After this, you should see this in the terminal:
+    ![tables](/screenshots/tables.jpg)
+
+    ```bash
+    SELECT * FROM warning_temperatures;
+    ```
+    After this query, you should see the values in the table:
+    ![warning_temperatures table](/screenshots/warning_temperatures_table.jpg)
 
 ## 📂 Project Structure
 
